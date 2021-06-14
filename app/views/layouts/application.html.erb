@@ -12,6 +12,10 @@
   <body>
     <% if user_signed_in? %>
       <li>
+        <%= link_to '投稿フォーム', new_post_image_path %>
+      </li>
+
+      <li>
         <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
       </li>
     <% else %>
@@ -22,7 +26,7 @@
         <%= link_to "ログイン", new_user_session_path %>
       </li>
     <% end %>
-    
+
     <%= yield %>
   </body>
 </html>
