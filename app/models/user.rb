@@ -6,10 +6,12 @@ class User < ApplicationRecord
 
   # 一 : N = User : post_images(モデル名の複数形)
   has_many :post_images, dependent: :destroy
-  
+
   # 一 : N = User : post_comments(モデル名の複数形)
   has_many :post_comments, dependent: :destroy
-  
-  
-  
+
+   has_many :favorites, dependent: :destroy
+
+
+
 end
