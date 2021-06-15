@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::Base
+  before_action :authenticate_user!,expect: [:top]
+  
   before_action :configure_permitted_parameters, if: :devise_controller?
   
   # ログイン、ログアウト後は、投稿一覧画面を作成したので、ログイン後は投稿一覧画面に遷移するように修正
