@@ -10,7 +10,9 @@ class User < ApplicationRecord
   # 一 : N = User : post_comments(モデル名の複数形)
   has_many :post_comments, dependent: :destroy
 
-   has_many :favorites, dependent: :destroy
+  has_many :favorites, dependent: :destroy
+  
+  attachment :profile_image
 
 
 
